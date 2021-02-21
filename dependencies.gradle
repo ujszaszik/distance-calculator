@@ -1,0 +1,99 @@
+ext {
+
+    apply from: 'versions.gradle'
+
+    androidExtensionLibs = [
+            appCompat       : "androidx.appcompat:appcompat:$version_app_compat",
+            constraintLayout: "androidx.constraintlayout:constraintlayout:$version_constraint_layout",
+            fragmentKtx     : "androidx.fragment:fragment-ktx:$version_fragment_ktx",
+            legacySupport   : "androidx.legacy:legacy-support-v4:$version_legacy_support",
+            material        : "com.google.android.material:material:$version_material",
+            preferenceKtx   : "androidx.preference:preference-ktx:$version_preference",
+            recyclerView    : "androidx.recyclerview:recyclerview:$version_recycler_view",
+            workManager     : "android.arch.work:work-runtime-ktx:$version_workmanager",
+            xCore           : "androidx.core:core-ktx:$version_x_core"
+    ]
+
+    kotlinLibs = [
+            stdLib : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version_kotlin",
+            reflect: "org.jetbrains.kotlin:kotlin-reflect:$version_kotlin"
+    ]
+
+    coroutineLibs = [
+            core   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version_coroutines",
+            android: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version_coroutines",
+            adapter: "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_coroutines_adapter"
+    ]
+
+    lifecycleExtensionLibs = [
+            lifeCycle: "androidx.lifecycle:lifecycle-extensions:$version_lifecycle",
+            liveData : "androidx.lifecycle:lifecycle-livedata-ktx:$version_lifecycle",
+            viewModel: "androidx.lifecycle:lifecycle-viewmodel-ktx:$version_lifecycle"
+    ]
+
+    navigationComponentLibs = [
+            ui : "androidx.navigation:navigation-ui-ktx:$version_navigation",
+            ktx: "androidx.navigation:navigation-fragment-ktx:$version_navigation"
+    ]
+
+    googleLibs = [
+            location: "com.google.android.gms:play-services-location:$version_gms_play_services_location",
+            maps    : "com.google.android.gms:play-services-maps:$version_gms_play_services_maps"
+    ]
+
+    retrofitLibs = [
+            core          : "com.squareup.retrofit2:retrofit:$version_retrofit",
+            moshiConverter: "com.squareup.retrofit2:converter-moshi:$version_retrofit",
+            logging       : "com.squareup.okhttp3:logging-interceptor:$version_logging_interceptor"
+    ]
+
+    moshiLibs = [
+            moshi : "com.squareup.moshi:moshi:$version_moshi",
+            kotlin: "com.squareup.moshi:moshi-kotlin:$version_moshi"
+    ]
+
+    moshiKapt = [
+            moshi: "com.squareup.moshi:moshi-kotlin-codegen:$version_moshi"
+    ]
+
+    hiltLibs = [
+            android  : "com.google.dagger:hilt-android:$version_dagger_hilt",
+            viewModel: "androidx.hilt:hilt-lifecycle-viewmodel:$version_dagger_hilt_ext"
+    ]
+
+    hiltKapt = [
+            android : "com.google.dagger:hilt-android-compiler:$version_dagger_hilt",
+            compiler: "androidx.hilt:hilt-compiler:$version_dagger_hilt_ext"
+    ]
+
+    glideLibs = [
+            glide: "com.github.bumptech.glide:glide:$version_glide"
+    ]
+
+    glideKapt = [
+            glide: "com.github.bumptech.glide:compiler:$version_glide"
+    ]
+
+    tickerViewLibs = [
+            ticker: "com.robinhood.ticker:ticker:$version_ticker_view"
+    ]
+
+    lottieLibs = [
+            android: "com.airbnb.android:lottie:$version_lottie"
+    ]
+
+    threeTenLibs = [
+            abp: "com.jakewharton.threetenabp:threetenabp:$version_three_ten_abp"
+    ]
+
+    testLibs = [
+            junit: "junit:junit:$version_junit"
+    ]
+
+    androidTestLibs = [
+            junit   : "androidx.test.ext:junit:$version_junit_ext",
+            espresso: "androidx.test.espresso:espresso-core:$version_espresso"
+    ]
+
+
+}
