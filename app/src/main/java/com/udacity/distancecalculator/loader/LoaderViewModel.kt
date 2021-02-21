@@ -21,6 +21,6 @@ class LoaderViewModel @ViewModelInject constructor() : ViewModel() {
     }
 
     fun resetNavigation() {
-        _navigateToMainScreen.postValue(false)
+        _navigateToMainScreen.value = null
     }
 }
