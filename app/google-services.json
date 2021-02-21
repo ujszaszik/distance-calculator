@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "143601344262",
+    "project_id": "distance-caulculator",
+    "storage_bucket": "distance-caulculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143601344262:android:caaa63eb584590e8d30887",
+        "android_client_info": {
+          "package_name": "com.udacity.distancecalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143601344262-j610cjf1n6t7tiklent6tkmhsrsm5q33.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcK1OYheAhMoKrJK9eYjv-IRi99GpvMWo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143601344262-j610cjf1n6t7tiklent6tkmhsrsm5q33.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/settingsAnimationView"
+            style="@style/lottieDefaultImageViewStyle"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/settingsFragmentContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settingsAnimationView" />
+
+        <Constraint
+            android:id="@+id/settingsHomeButton"
+            style="@style/rightBottomFabStyle"
+            app:backgroundTint="?attr/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/settingsAnimationView"
+            style="@style/lottieDefaultImageViewStyle"
+            android:layout_marginTop="@dimen/large_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="settings-animation.json"
+            app:lottie_loop="false" />
+
+        <Constraint
+            android:id="@+id/settingsFragmentContainer"
+            android:name="com.udacity.distancecalculator.screens.settings.SettingsFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settingsAnimationView" />
+
+        <Constraint
+            android:id="@+id/settingsHomeButton"
+            style="@style/rightBottomFabStyle"
+            app:backgroundTint="?attr/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@android:color/white"
+            app:srcCompat="@drawable/ic_home_white"
+            app:tint="@color/white" />
+
+    </ConstraintSet>
+
+    <Transition
+        app:autoTransition="animateToEnd"
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="@integer/motion_settings_duration">
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:alpha="@integer/motion_alpha_transparent"
+                app:framePosition="@integer/motion_frame_start"
+                app:motionTarget="@id/settingsFragmentContainer" />
+
+            <KeyAttribute
+                android:alpha="@integer/motion_alpha_opaque"
+                app:framePosition="@integer/motion_frame_end"
+                app:motionTarget="@id/settingsFragmentContainer" />
+        </KeyFrameSet>
+
+
+    </Transition>
+</MotionScene>

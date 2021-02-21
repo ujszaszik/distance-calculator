@@ -1,0 +1,44 @@
+<resources>
+    <!-- Language Preference -->
+    <string-array name="languageArray">
+        <item>@string/language_english_value</item>
+        <item>@string/language_hebrew_value</item>
+        <item>@string/language_arabic_value</item>
+        <item>@string/language_hindi_value</item>
+    </string-array>
+
+    <string-array name="languageValues">
+        <item>@string/language_english_key</item>
+        <item>@string/language_hebrew_key</item>
+        <item>@string/language_arabic_key</item>
+        <item>@string/language_hindi_key</item>
+    </string-array>
+
+
+    <!-- Map Style Preference -->
+    <string-array name="mapStyleArray">
+        <item>@string/map_style_default_value</item>
+        <item>@string/map_style_hybrid_value</item>
+        <item>@string/map_style_terrain_value</item>
+        <item>@string/map_style_satellite_value</item>
+    </string-array>
+
+    <string-array name="mapStyleValues">
+        <item>@string/map_style_default_key</item>
+        <item>@string/map_style_hybrid_key</item>
+        <item>@string/map_style_satellite_key</item>
+        <item>@string/map_style_terrain_key</item>
+    </string-array>
+
+
+    <!-- Distance Unit Preference -->
+    <string-array name="distanceUnitArray">
+        <item>@string/distance_unit_km_value</item>
+        <item>@string/distance_unit_miles_value</item>
+    </string-array>
+
+    <string-array name="distanceUnitValues">
+        <item>@string/distance_unit_km_key</item>
+        <item>@string/distance_unit_mile_key</item>
+    </string-array>
+</resources>

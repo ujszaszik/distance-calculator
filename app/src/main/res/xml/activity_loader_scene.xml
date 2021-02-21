@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/appLogoImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/heavy_margin"
+            app:layout_constraintBottom_toTopOf="@+id/parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/app_logo_globe_only" />
+
+        <Constraint
+            android:id="@+id/appLogoTextDistanceImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/appLogoTextCalculatorImageView"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:srcCompat="@drawable/app_logo_text_distance" />
+
+        <Constraint
+            android:id="@+id/appLogoTextCalculatorImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineForLogo"
+            app:srcCompat="@drawable/app_logo_text_calculator" />
+
+        <Constraint
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <Constraint
+            android:id="@+id/guidelineForLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="@dimen/half" />
+
+        <Constraint
+            android:id="@+id/guidelineForProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="@dimen/eighty_pct" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/appLogoImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/heavy_margin"
+            app:layout_constraintBottom_toTopOf="@+id/appLogoTextDistanceImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/app_logo_globe_only" />
+
+        <Constraint
+            android:id="@+id/appLogoTextDistanceImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/appLogoTextCalculatorImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/app_logo_text_distance" />
+
+        <Constraint
+            android:id="@+id/appLogoTextCalculatorImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineForLogo"
+            app:srcCompat="@drawable/app_logo_text_calculator" />
+
+        <Constraint
+            android:id="@+id/progressBar"
+            style="@style/DefaultProgressBar"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineForProgressBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/guidelineForLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="@dimen/half" />
+
+        <Constraint
+            android:id="@+id/guidelineForProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="@dimen/eighty_pct" />
+    </ConstraintSet>
+
+    <Transition
+        app:autoTransition="animateToEnd"
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="@integer/motion_loader_duration">
+
+        <KeyFrameSet>
+
+            <!--            APP LOGO KEYS-->
+            <KeyAttribute
+                android:rotationY="@integer/motion_angle_negative_turn"
+                app:framePosition="@integer/motion_frame_start"
+                app:motionTarget="@id/appLogoImageView" />
+            <KeyAttribute
+                android:rotationY="@integer/motion_angle_start"
+                app:framePosition="@integer/motion_frame_end"
+                app:motionTarget="@id/appLogoImageView" />
+
+            <KeyCycle
+                android:translationY="@dimen/zero"
+                app:framePosition="@integer/motion_frame_start"
+                app:motionTarget="@+id/appLogoImageView"
+                app:waveOffset="@dimen/zero"
+                app:wavePeriod="@integer/single"
+                app:waveShape="sin" />
+
+            <KeyCycle
+                android:translationY="@dimen/zero"
+                app:framePosition="@integer/motion_frame_mid"
+                app:motionTarget="@+id/appLogoImageView"
+                app:waveOffset="@dimen/zero"
+                app:wavePeriod="@integer/single"
+                app:waveShape="sin" />
+
+            <KeyCycle
+                android:translationY="@dimen/zero"
+                app:framePosition="@integer/motion_frame_end"
+                app:motionTarget="@+id/appLogoImageView"
+                app:waveOffset="@dimen/zero"
+                app:wavePeriod="@integer/single"
+                app:waveShape="sin" />
+
+            <!--            APP LOGO DISTANCE TEXT KEYS-->
+            <KeyAttribute
+                android:rotationY="@integer/motion_angle_negative_straight"
+                app:framePosition="@integer/motion_frame_start"
+                app:motionTarget="@id/appLogoTextDistanceImageView" />
+            <KeyAttribute
+                android:rotationY="@integer/motion_angle_start"
+                app:framePosition="@integer/motion_frame_end"
+                app:motionTarget="@id/appLogoTextDistanceImageView" />
+
+
+            <!--            APP LOGO CALCULATOR TEXT KEYS-->
+
+            <KeyAttribute
+                android:rotationY="@integer/motion_angle_negative_straight"
+                app:framePosition="@integer/motion_frame_start"
+                app:motionTarget="@id/appLogoTextCalculatorImageView" />
+            <KeyAttribute
+                android:rotationY="@integer/motion_angle_start"
+                app:framePosition="@integer/motion_frame_end"
+                app:motionTarget="@id/appLogoTextCalculatorImageView" />
+
+            <!--            PROGRESS BAR-->
+
+            <KeyAttribute
+                android:elevation="@dimen/zero"
+                app:framePosition="@integer/motion_frame_start"
+                app:motionTarget="@id/progressBar" />
+            <KeyAttribute
+                android:elevation="@dimen/progress_bar_max_elevation"
+                app:framePosition="@integer/motion_frame_end"
+                app:motionTarget="@id/progressBar" />
+
+        </KeyFrameSet>
+    </Transition>
+
+</MotionScene>

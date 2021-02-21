@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    GENERAL -->
+    <!--    _______ -->
+
+    <!--    APP THEME-->
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.Light">
+        <item name="snackbarStyle">@style/snackbarStyle</item>
+        <item name="snackbarTextViewStyle">@style/snackbarTextStyle</item>
+        <item name="android:textViewStyle">@style/defaultTextViewStyle</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:editTextColor">@color/grey</item>
+        <item name="android:textColorHint">@color/grey</item>
+    </style>
+
+    <!--    APP SNACKBAR-->
+    <style name="snackbarStyle" parent="@style/Widget.MaterialComponents.Snackbar">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="snackbarTextStyle" parent="@style/Widget.MaterialComponents.Snackbar.TextView">
+        <item name="android:textColor">@color/red</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--    APP TEXT VIEW -->
+    <style name="defaultTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <!--    CUSTOM VIEW STYLES -->
+    <!--    __________________ -->
+
+    <!--    AUTO COMPLETE-->
+    <style name="autoCompleteLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_height">@dimen/auto_complete_layout_height</item>
+        <item name="android:layout_width">@dimen/match_constraint</item>
+        <item name="android:textColorHint">@color/grey</item>
+    </style>
+
+    <style name="autoCompleteRowImageStyle">
+        <item name="android:layout_height">@dimen/auto_complete_image_height</item>
+        <item name="android:layout_width">@dimen/auto_complete_image_width</item>
+        <item name="android:layout_marginStart">@dimen/short_margin</item>
+        <item name="android:layout_marginTop">@dimen/tiny_margin</item>
+        <item name="android:layout_marginEnd">@dimen/short_margin</item>
+        <item name="android:layout_marginBottom">@dimen/tiny_margin</item>
+    </style>
+
+    <style name="autoCompleteRowTextStyle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/match_constraint</item>
+        <item name="android:layout_marginStart">@dimen/short_margin</item>
+        <item name="android:layout_marginEnd">@dimen/short_margin</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">@dimen/headline_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="autoCompleteTextViewStyle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_height">@dimen/auto_complete_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginBottom">@dimen/auto_complete_bottom_margin</item>
+        <item name="android:dropDownHeight">wrap_content</item>
+        <item name="android:paddingStart">@dimen/default_padding</item>
+        <item name="android:paddingEnd">@dimen/default_padding</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/headline_text_size</item>
+    </style>
+
+    <!--    BUTTON -->
+    <style name="mainPageButtonStyle" parent="Widget.MaterialComponents.Button.OutlinedButton.Icon">
+        <item name="android:layout_width">@dimen/default_button_width</item>
+        <item name="android:layout_height">@dimen/default_button_height</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
+        <item name="cornerRadius">@dimen/default_button_corner_radius</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">@dimen/default_button_icon_padding</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <!--    DIVIDER-->
+    <style name="dividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/divider_height</item>
+        <item name="android:layout_margin">@dimen/default_margin</item>
+        <item name="android:background">@color/grey</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--    FLOATING ACTION BUTTON-->
+    <style name="rightBottomFabStyle" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/floating_margin</item>
+        <item name="android:layout_marginBottom">@dimen/floating_margin</item>
+        <item name="borderWidth">@dimen/fab_borderWidth</item>
+        <item name="elevation">@dimen/fab_elevation</item>
+        <item name="fabSize">normal</item>
+        <item name="pressedTranslationZ">@dimen/fab_pressedTranslationZ</item>
+    </style>
+
+    <!--    IMAGE VIEW-->
+    <style name="iconImageView">
+        <item name="android:layout_width">@dimen/icon_image_view_size</item>
+        <item name="android:layout_height">@dimen/icon_image_view_size</item>
+        <item name="android:layout_marginStart">@dimen/default_margin</item>
+    </style>
+
+    <!--    LOTTIE ANIMATION VIEW-->
+    <style name="lottieImageViewStyle">
+        <item name="android:layout_marginTop">@dimen/large_margin</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="lottie_autoPlay">true</item>
+        <item name="lottie_loop">false</item>
+    </style>
+
+    <style name="lottieDefaultImageViewStyle" parent="lottieImageViewStyle">
+        <item name="android:layout_width">@dimen/lottie_view_size</item>
+        <item name="android:layout_height">@dimen/lottie_view_size</item>
+    </style>
+
+    android:layout_width="240dp"
+    android:layout_height="240dp"
+    android:layout_marginTop="48dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:lottie_autoPlay="true"
+    app:lottie_fileName="settings-animation.json"
+    app:lottie_loop="false"
+    app:lottie_speed="2"
+
+    <style name="lottieAdjustedImageViewStyle" parent="lottieImageViewStyle">
+        <item name="android:layout_width">@dimen/lottie_view_size</item>
+        <item name="android:layout_height">@dimen/lottie_adjusted_view_size</item>
+    </style>
+
+    <style name="lottieLoadingImageViewStyle">
+        <item name="android:layout_width">@dimen/lottie_view_size</item>
+        <item name="android:layout_height">@dimen/lottie_loading_image_height</item>
+        <item name="android:layout_marginTop">@dimen/large_margin</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="lottie_autoPlay">true</item>
+        <item name="lottie_loop">true</item>
+    </style>
+
+    <style name="resultNotAvailableTextViewStyle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/large_margin</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+    </style>
+
+    <style name="lottieResultStyle">
+        <item name="android:layout_width">@dimen/lottie_no_results_width</item>
+        <item name="android:layout_height">@dimen/lottie_no_results_height</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="lottie_autoPlay">true</item>
+    </style>
+
+    <style name="lottieNoResultsImageViewStyle" parent="lottieResultStyle">
+        <item name="lottie_loop">false</item>
+    </style>
+
+    <style name="lottieResultViewStyle" parent="lottieResultStyle">
+        <item name="lottie_loop">true</item>
+    </style>
+
+    <!-- PROGRESS BAR-->
+    <style name="DefaultProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:layout_width">@dimen/progress_bar_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminate">true</item>
+        <item name="android:indeterminateTint">@color/blue</item>
+        <item name="android:indeterminateTintMode">src_atop</item>
+        <item name="android:max">@integer/progress_bar_max</item>
+        <item name="android:progress">@integer/progress_bar_max</item>
+    </style>
+
+    <!--    TEXT VIEW-->
+    <style name="durationTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">@dimen/match_constraint</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">@dimen/default_text_size</item>
+    </style>
+
+    <style name="distanceUnitTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/small_margin</item>
+        <item name="android:textSize">@dimen/big_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--    TICKER VIEW-->
+    <style name="tickerViewStyle">
+        <item name="android:layout_width">@dimen/match_constraint</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/default_margin</item>
+        <item name="android:layout_marginEnd">@dimen/default_margin</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">@dimen/big_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

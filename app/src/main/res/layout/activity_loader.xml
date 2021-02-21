@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/activity_loader_scene"
+        tools:context=".loader.LoaderActivity">
+
+        <ImageView
+            android:id="@+id/appLogoImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/heavy_margin"
+            app:layout_constraintBottom_toTopOf="@+id/appLogoTextDistanceImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/app_logo_globe_only" />
+
+        <ImageView
+            android:id="@+id/appLogoTextDistanceImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/appLogoTextCalculatorImageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/app_logo_text_distance" />
+
+        <ImageView
+            android:id="@+id/appLogoTextCalculatorImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineForLogo"
+            app:srcCompat="@drawable/app_logo_text_calculator" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/DefaultProgressBar"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineForProgressBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineForLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="@dimen/half" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineForProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="@dimen/eighty_pct" />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+</layout>

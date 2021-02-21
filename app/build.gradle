@@ -1,0 +1,88 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-android-extensions'
+    id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
+    id 'io.objectbox'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.udacity.distancecalculator"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        freeCompilerArgs = ["$attr_allowResultAsReturnType"]
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+    buildFeatures {
+        dataBinding true
+    }
+    externalNativeBuild {
+        cmake {
+            path "$attr_cMakeFile"
+        }
+    }
+    ndkVersion "$version_ndk"
+}
+
+dependencies {
+
+    implementation kotlinLibs.values()
+
+    implementation coroutineLibs.values()
+
+    implementation androidExtensionLibs.values()
+
+    implementation lifecycleExtensionLibs.values()
+
+    implementation navigationComponentLibs.values()
+
+    implementation googleLibs.values()
+
+    implementation retrofitLibs.values()
+
+    implementation moshiLibs.values()
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    kapt moshiKapt.values()
+
+    implementation hiltLibs.values()
+    kapt hiltKapt.values()
+
+    implementation glideLibs.values()
+    kapt glideKapt.values()
+
+    implementation tickerViewLibs.values()
+
+    implementation lottieLibs.values()
+
+    implementation threeTenLibs.values()
+
+    testImplementation testLibs.values()
+
+    androidTestImplementation androidTestLibs.values()
+
+}

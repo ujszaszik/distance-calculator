@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Distance Calculator</string>
+
+    <!--    Selector Labels-->
+    <string name="label_selector_starting_location">Starting Location</string>
+    <string name="label_selector_destination">Destination</string>
+    <string name="label_button_selector_calculate_distance">CALCULATE DISTANCE</string>
+    <string name="label_button_selector_select_from_map">SELECT FROM MAP</string>
+    <string name="label_button_selector_go_to_settings">GO TO SETTINGS</string>
+    <string name="label_map_selector_calculate">Calculate</string>
+    <string name="label_selector_starting_initial" translatable="false">S</string>
+    <string name="label_selector_destination_initial" translatable="false">D</string>
+    <string name="label_selector_list_all_cities"><u>List all cities</u></string>
+    <string name="label_list_no_items">No items are available</string>
+
+    <!-- Map Search Labels-->
+    <string name="label_map_search_not_found">Cannot find this place!</string>
+    <string name="label_map_search_empty">Please enter text to search!</string>
+
+    <!--    Results Labels-->
+    <string name="label_results_disconnected">Turn on your network connection to get more results</string>
+    <string name="label_results_error_message">An error occurred. Please try again.</string>
+    <string name="label_result_no_results">No results found for this route</string>
+
+    <!--    Navigation Labels-->
+    <string name="label_navigation_map_selector_screen">Map Location Selector</string>
+    <string name="label_navigation_results_screen">Calculation Results</string>
+    <string name="label_navigation_selector_screen">Location Selector</string>
+    <string name="label_navigation_location_list">Location Listing</string>
+
+    <!--    Snackbar Labels-->
+    <string name="label_snackbar_enable_location">Enable location to use current position!</string>
+    <string name="label_snackbar_enable_network">Enable network to fetch list of cities!</string>
+    <string name="label_snackbar_empty_selection">Select from list or use your location!</string>
+
+    <!--    Application Language Preferences-->
+    <string name="language_preference_title">Application Language</string>
+    <string name="language_preference_key" translatable="false">language</string>
+    <string name="language_english_key" translatable="false">english</string>
+    <string name="language_english_value">English</string>
+    <string name="language_hebrew_key" translatable="false">hebrew</string>
+    <string name="language_hebrew_value">Hebrew</string>
+    <string name="language_arabic_key" translatable="false">arabic</string>
+    <string name="language_arabic_value">Arabic</string>
+    <string name="language_hindi_key" translatable="false">hindi</string>
+    <string name="language_hindi_value">Hindi</string>
+
+    <!--    Map Style Preferences-->
+    <string name="map_style_preference_title">Selector Map Styling</string>
+    <string name="map_style_preference_key" translatable="false">mapStyle</string>
+    <string name="map_style_default_key" translatable="false">default</string>
+    <string name="map_style_default_value">Default</string>
+    <string name="map_style_terrain_key" translatable="false">terrain</string>
+    <string name="map_style_terrain_value">Terrain</string>
+    <string name="map_style_hybrid_key" translatable="false">hybrid</string>
+    <string name="map_style_hybrid_value">Hybrid</string>
+    <string name="map_style_satellite_key" translatable="false">satellite</string>
+    <string name="map_style_satellite_value">Satellite</string>
+
+    <!--    Distance Unit Preferences-->
+    <string name="distance_unit_preference_title">Distance Unit</string>
+    <string name="distance_unit_preference_key" translatable="false">distanceUnit</string>
+    <string name="distance_unit_km_key" translatable="false">kilometers</string>
+    <string name="distance_unit_km_value">Kilometers</string>
+    <string name="distance_unit_km_text" translatable="false">km</string>
+    <string name="distance_unit_mile_key" translatable="false">Miles</string>
+    <string name="distance_unit_miles_value">Miles</string>
+    <string name="distance_unit_miles_text" translatable="false">mi</string>
+
+</resources>

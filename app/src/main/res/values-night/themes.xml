@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="Theme.DistanceCalculator" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorSecondary">@color/teal_200</item>
+    </style>
+</resources>

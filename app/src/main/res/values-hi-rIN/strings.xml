@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">दूरी कैलकुलेटर</string>
+
+    <!--    Selector Labels-->
+    <string name="label_selector_starting_location">आरंभ स्थान</string>
+    <string name="label_selector_destination">मंजिल</string>
+    <string name="label_button_selector_calculate_distance">कैलकुलेट की अवधि</string>
+    <string name="label_button_selector_select_from_map">नक्शे से चयन करें</string>
+    <string name="label_button_selector_go_to_settings">सेटिंग्स में जाओ</string>
+    <string name="label_map_selector_calculate">गणना</string>
+    <string name="label_selector_list_all_cities"><u>सभी शहरों की सूची</u></string>
+    <string name="label_list_no_items">कोई वस्तु उपलब्ध नहीं है</string>
+
+    <!-- Map Search Labels-->
+    <string name="label_map_search_not_found">यह जगह नहीं मिल रही है!</string>
+    <string name="label_map_search_empty">कृपया खोज करने के लिए पाठ दर्ज करें!</string>
+
+    <!--    Results Labels-->
+    <string name="label_results_error_message">एक त्रुटि पाई गई। कृपया पुन: प्रयास करें।</string>
+    <string name="label_results_disconnected">अधिक परिणाम प्राप्त करने के लिए अपने नेटवर्क कनेक्शन को चालू करें</string>
+    <string name="label_result_no_results">इस मार्ग के लिए कोई परिणाम नहीं मिले</string>
+
+    <!--    Navigation Labels-->
+    <string name="label_navigation_selector_screen">स्थान चयनकर्ता</string>
+    <string name="label_navigation_map_selector_screen">मानचित्र स्थान चयनकर्ता</string>
+    <string name="label_navigation_results_screen">गणना परिणाम</string>
+    <string name="label_navigation_location_list">स्थान सूचीकरण</string>
+
+    <!--    Snackbar Labels-->
+    <string name="label_snackbar_enable_location">वर्तमान स्थिति का उपयोग करने के लिए कृपया स्थान सक्षम करें!</string>
+    <string name="label_snackbar_empty_selection">कृपया सूची से चयन करें या अपने स्थान का उपयोग करें!</string>
+    <string name="label_snackbar_enable_network">कृपया शहरों को सूचीबद्ध करने के लिए नेटवर्क सक्षम करें!</string>
+
+    <!--    Application Language Preferences-->
+    <string name="language_preference_title">अनुप्रयोग भाषा</string>
+    <string name="language_english_value">अंग्रेज़ी (English)</string>
+    <string name="language_hebrew_value">यहूदी (Hebrew)</string>
+    <string name="language_arabic_value">अरबी (Arabic)</string>
+    <string name="language_hindi_value">हिन्दी</string>
+
+    <!--    Map Style Preferences-->
+    <string name="map_style_preference_title">चयनकर्ता मानचित्र स्टाइलिंग</string>
+    <string name="map_style_default_value">चूक</string>
+    <string name="map_style_terrain_value">इलाके</string>
+    <string name="map_style_hybrid_value">हाइब्रिड</string>
+    <string name="map_style_satellite_value">उपग्रह</string>
+
+    <!--    Distance Unit Preferences-->
+    <string name="distance_unit_preference_title">दूरी इकाई</string>
+    <string name="distance_unit_km_value">किलोमीटर</string>
+    <string name="distance_unit_miles_value">मील की दूरी पर</string>
+
+</resources>

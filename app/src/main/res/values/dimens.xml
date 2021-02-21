@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    GENERAL -->
+    <!--    ________ -->
+    <dimen name="match_constraint">0dp</dimen>
+    <dimen name="zero">0dp</dimen>
+
+    <!--    GUIDELINE PERCENTAGE-->
+    <dimen name="ten_pct">0.1</dimen>
+    <dimen name="half">0.5</dimen>
+    <dimen name="eighty_pct">0.8</dimen>
+    <dimen name="ninety_pct">0.9</dimen>
+
+    <!--    MARGIN-->
+    <dimen name="heavy_margin">64dp</dimen>
+    <dimen name="large_margin">48dp</dimen>
+    <dimen name="big_margin">36dp</dimen>
+    <dimen name="floating_margin">32dp</dimen>
+    <dimen name="default_margin">15dp</dimen>
+    <dimen name="short_margin">12dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="tiny_margin">4dp</dimen>
+
+    <!--    PADDING-->
+    <dimen name="default_padding">12dp</dimen>
+    <dimen name="preference_padding">48dp</dimen>
+
+    <!--    TEXT SIZE-->
+    <dimen name="big_text_size">24sp</dimen>
+    <dimen name="headline_text_size">18sp</dimen>
+    <dimen name="default_text_size">16sp</dimen>
+
+
+    <!--    VIEWS-->
+    <!--    ______ -->
+
+    <!--    AUTO COMPLETE-->
+    <dimen name="auto_complete_height">54dp</dimen>
+    <dimen name="auto_complete_bottom_margin">10dp</dimen>
+    <dimen name="auto_complete_image_height">24dp</dimen>
+    <dimen name="auto_complete_image_width">36dp</dimen>
+    <dimen name="auto_complete_layout_height">60dp</dimen>
+    <dimen name="auto_complete_text_input_top_margin">32dp</dimen>
+
+    <!--    BOTTOM SHEET-->
+    <dimen name="bottom_sheet_elevation">4dp</dimen>
+    <dimen name="bottom_sheet_height">240dp</dimen>
+    <dimen name="bottom_sheet_peek_height">32dp</dimen>
+    <dimen name="bottom_sheet_scroller_height">5dp</dimen>
+    <dimen name="bottom_sheet_scroller_width">80dp</dimen>
+
+    <!--    BUTTON-->
+    <dimen name="default_button_corner_radius">3dp</dimen>
+    <dimen name="default_button_height">54dp</dimen>
+    <dimen name="default_button_icon_padding">6dp</dimen>
+    <dimen name="default_button_width">320dp</dimen>
+
+    <!--    CANCEL VIEW-->
+    <dimen name="cancel_view_size">24dp</dimen>
+
+    <!--    CARD VIEW-->
+    <dimen name="card_view_corner_radius">24dp</dimen>
+    <dimen name="card_view_negative_bottom_margin">-24dp</dimen>
+    <dimen name="card_view_radius">0dp</dimen>
+    <dimen name="card_view_thickness_ratio">1.9</dimen>
+
+    <!--    DIVIDER-->
+    <dimen name="divider_height">1dp</dimen>
+    <dimen name="divider_margin">15dp</dimen>
+
+    <!--    FLOATING ACTION BUTTON-->
+    <dimen name="fab_borderWidth">0dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
+    <dimen name="fab_pressedTranslationZ">12dp</dimen>
+
+    <!--    ICON IMAGE VIEW-->
+    <dimen name="icon_image_view_size">54dp</dimen>
+
+    <!--    LOTTIE-->
+    <dimen name="lottie_adjusted_view_size">150dp</dimen>
+    <dimen name="lottie_loading_image_height">14dp</dimen>
+    <dimen name="lottie_no_results_height">100dp</dimen>
+    <dimen name="lottie_no_results_width">180dp</dimen>
+    <dimen name="lottie_view_size">240dp</dimen>
+
+    <!--    PROGRESS BAR-->
+    <dimen name="progress_bar_width">250dp</dimen>
+    <dimen name="progress_bar_max_elevation">100dp</dimen>
+
+    <!--    SELECTOR-->
+    <dimen name="map_selector_circle_letter_text_size">32sp</dimen>
+    <dimen name="selector_button_bottom_margin">54dp</dimen>
+
+</resources>

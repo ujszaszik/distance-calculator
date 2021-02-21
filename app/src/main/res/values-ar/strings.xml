@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">حاسبة المسافة</string>
+
+    <!--    Selector Labels-->
+    <string name="label_selector_starting_location">موقع البدء</string>
+    <string name="label_selector_destination">وجهة</string>
+    <string name="label_button_selector_calculate_distance">احسب المسافة</string>
+    <string name="label_button_selector_select_from_map">اختر من الخريطة</string>
+    <string name="label_button_selector_go_to_settings">اذهب للاعدادات</string>
+    <string name="label_map_selector_calculate">احسب</string>
+    <string name="label_selector_list_all_cities"><u>قائمة بجميع المدن</u></string>
+    <string name="label_list_no_items">لا توجد عناصر متاحة</string>
+
+    <!-- Map Search Labels-->
+    <string name="label_map_search_not_found">لا يمكن العثور على هذا المكان!</string>
+    <string name="label_map_search_empty">الرجاء إدخال النص للبحث!</string>
+
+    <!--    Results Labels-->
+    <string name="label_results_error_message">حدث خطأ. حاول مرة اخرى.</string>
+    <string name="label_results_disconnected">قم بتشغيل اتصال الشبكة للحصول على المزيد من النتائج</string>
+    <string name="label_result_no_results">لا توجد نتائج لهذا الطريق</string>
+
+    <!--    Navigation Labels-->
+    <string name="label_navigation_selector_screen">محدد الموقع</string>
+    <string name="label_navigation_map_selector_screen">محدد موقع الخريطة</string>
+    <string name="label_navigation_results_screen">نتائج الحساب</string>
+    <string name="label_navigation_location_list">قائمة الموقع</string>
+
+    <!--    Snackbar Labels-->
+    <string name="label_snackbar_enable_location">لاستخدام الوظيفة الحالية يرجى تمكين الموقع!</string>
+    <string name="label_snackbar_empty_selection">الرجاء الاختيار من القائمة أو استخدام موقعك!</string>
+    <string name="label_snackbar_enable_network">الرجاء تمكين الشبكة لجلب قائمة المدن!</string>
+
+    <!--    Application Language Preferences-->
+    <string name="language_preference_title">لغة التطبيق</string>
+    <string name="language_english_value">الإنجليزية (English)</string>
+    <string name="language_hebrew_value">اللغة العبرية (Hebrew)</string>
+    <string name="language_arabic_value">عربي</string>
+    <string name="language_hindi_value">هندي (Hindi)</string>
+
+    <!--    Map Style Preferences-->
+    <string name="map_style_preference_title">محدد خريطة التصميم</string>
+    <string name="map_style_satellite_value">الأقمار الصناعية</string>
+    <string name="map_style_hybrid_value">هجين</string>
+    <string name="map_style_terrain_value">تضاريس</string>
+    <string name="map_style_default_value">إفتراضي</string>
+
+    <!--    Distance Unit Preferences-->
+    <string name="distance_unit_preference_title">وحدة المسافة</string>
+    <string name="distance_unit_miles_value">اميال</string>
+    <string name="distance_unit_km_value">كيلومترات</string>
+
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/card_view_negative_bottom_margin"
+        android:backgroundTint="@color/white"
+        android:foregroundGravity="center"
+        android:innerRadius="@dimen/card_view_radius"
+        android:shape="ring"
+        android:thicknessRatio="@dimen/card_view_thickness_ratio"
+        app:cardCornerRadius="@dimen/card_view_corner_radius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent">
+
+            <LinearLayout
+                android:id="@+id/scroller"
+                android:layout_width="@dimen/bottom_sheet_scroller_width"
+                android:layout_height="@dimen/bottom_sheet_scroller_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/default_margin"
+                android:background="@color/grey"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@id/fromSelectionRow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.udacity.distancecalculator.screens.mapselector.bottomsheet.MapSelectorBottomRow
+                android:id="@+id/fromSelectionRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin"
+                app:circleBackground="@drawable/circle_green"
+                app:circleLetter="@string/label_selector_starting_initial"
+                app:isIconVisible="true"
+                app:labelText="@string/label_selector_starting_location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scroller" />
+
+            <com.udacity.distancecalculator.screens.mapselector.bottomsheet.MapSelectorBottomRow
+                android:id="@+id/toSelectionRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:circleBackground="@drawable/circle_yellow"
+                app:circleLetter="@string/label_selector_destination_initial"
+                app:isIconVisible="true"
+                app:labelText="@string/label_selector_destination"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fromSelectionRow" />
+
+            <Button
+                android:id="@+id/mapCalculateButton"
+                android:layout_width="@dimen/match_constraint"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/default_margin"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/default_margin"
+                android:backgroundTint="@color/blue"
+                android:text="@string/label_map_selector_calculate"
+                android:visibility="gone"
+                app:icon="@drawable/ic_calculate_white"
+                app:iconGravity="textStart"
+                app:iconTintMode="src_in"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toSelectionRow" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

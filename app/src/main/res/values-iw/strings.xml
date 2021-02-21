@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">מחשבון מרחק</string>
+
+    <!--    Selector Labels-->
+    <string name="label_selector_starting_location">מיקום התחלתי</string>
+    <string name="label_selector_destination">יַעַד</string>
+    <string name="label_button_selector_calculate_distance">חישוב מרחק</string>
+    <string name="label_button_selector_select_from_map">בחר מתוך מפה</string>
+    <string name="label_button_selector_go_to_settings">לך להגדרות</string>
+    <string name="label_map_selector_calculate">לחשב</string>
+    <string name="label_selector_list_all_cities"><u>רשימת כל הערים</u></string>
+    <string name="label_list_no_items">אין פריטים זמינים</string>
+
+    <!-- Map Search Labels-->
+    <string name="label_map_search_empty">אנא הכנס טקסט לחיפוש!</string>
+    <string name="label_map_search_not_found">לא מצליח למצוא את המקום הזה!</string>
+
+    <!--    Results Labels-->
+    <string name="label_results_error_message">התרחשה שגיאה. בבקשה נסה שוב.</string>
+    <string name="label_results_disconnected">הפעל את חיבור הרשת שלך כדי לקבל תוצאות נוספות</string>
+    <string name="label_result_no_results">לא נמצאו תוצאות למסלול זה</string>
+
+    <!--    Navigation Labels-->
+    <string name="label_navigation_selector_screen">בורר מיקום</string>
+    <string name="label_navigation_map_selector_screen">בורר מיקום מפה</string>
+    <string name="label_navigation_results_screen">תוצאות חישוב</string>
+    <string name="label_navigation_location_list">רישום מיקום</string>
+
+    <!--    Snackbar Labels-->
+    <string name="label_snackbar_enable_location">כדי להשתמש במיקום הנוכחי אנא הפעל מיקום!</string>
+    <string name="label_snackbar_empty_selection">אנא בחר מהרשימה או השתמש במיקום שלך!</string>
+    <string name="label_snackbar_enable_network">אנא אפשר לרשת להביא רשימת ערים!</string>
+
+    <!--    Application Language Preferences-->
+    <string name="language_preference_title">שפת היישום</string>
+    <string name="language_hindi_value">הינדית (Hindi)</string>
+    <string name="language_arabic_value">עֲרָבִית (Arabic)</string>
+    <string name="language_english_value">אנגלית (English)</string>
+    <string name="language_hebrew_value">עִברִית</string>
+
+    <!--    Map Style Preferences-->
+    <string name="map_style_preference_title">סטיילינג מפת בורר</string>
+    <string name="map_style_satellite_value">לווין</string>
+    <string name="map_style_hybrid_value">היברידי</string>
+    <string name="map_style_terrain_value">פְּנֵי הַשֵׁטַח</string>
+    <string name="map_style_default_value">בְּרִירַת מֶחדָל</string>
+
+    <!--    Distance Unit Preferences-->
+    <string name="distance_unit_preference_title">יחידת מרחק</string>
+    <string name="distance_unit_miles_value">מיילס</string>
+    <string name="distance_unit_km_value">קילומטרים</string>
+
+</resources>

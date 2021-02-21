@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="result"
+            type="com.udacity.distancecalculator.distance.model.DistanceResult" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.result.ResultFragment">
+
+        <!--        LOADING SCREEN-->
+
+        <include
+            android:id="@+id/loadingScreen"
+            layout="@layout/fragment_result_loading_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <!--        ERROR SCREEN-->
+
+        <include
+            android:id="@+id/errorScreen"
+            layout="@layout/fragment_result_error_screen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <!--        RESULTS SCREEN -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/resultScreen"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/successAnimationView"
+                style="@style/lottieAdjustedImageViewStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_fileName="success-animation.json" />
+
+            <ImageView
+                android:id="@+id/airplaneImageView"
+                style="@style/iconImageView"
+                android:layout_marginTop="@dimen/big_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/successAnimationView"
+                app:srcCompat="@drawable/icon_traffic_plane" />
+
+            <com.robinhood.ticker.TickerView
+                android:id="@+id/airPlaneTickerView"
+                style="@style/tickerViewStyle"
+                android:textColor="@color/red"
+                app:distance="@{result.distanceInAirline}"
+                app:layout_constraintBottom_toBottomOf="@+id/airplaneImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/airplaneImageView"
+                app:layout_constraintTop_toTopOf="@+id/airplaneImageView" />
+
+            <LinearLayout
+                android:id="@+id/firstDivider"
+                style="@style/dividerStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/airplaneImageView" />
+
+            <ImageView
+                android:id="@+id/carImageView"
+                style="@style/iconImageView"
+                android:layout_marginTop="@dimen/default_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstDivider"
+                app:srcCompat="@drawable/icon_traffic_car" />
+
+            <com.robinhood.ticker.TickerView
+                android:id="@+id/carTickerView"
+                style="@style/tickerViewStyle"
+                android:textColor="@color/lime"
+                app:distance="@{result.roadDistance.distance}"
+                app:layout_constraintBottom_toTopOf="@id/carTimeTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/carImageView"
+                app:layout_constraintTop_toTopOf="@+id/carImageView" />
+
+            <TextView
+                android:id="@+id/carTimeTextView"
+                style="@style/durationTextView"
+                app:layout_constraintBottom_toBottomOf="@+id/carImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/carTickerView"
+                app:layout_constraintTop_toBottomOf="@+id/carTickerView"
+                app:timeText="@{result.roadDistance.duration}" />
+
+            <!--        DISCONNECTED SCREEN START -->
+            <include
+                android:id="@+id/disconnectedScreen"
+                layout="@layout/fragment_result_disconnected_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/heavy_margin"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/secondDivider" />
+            <!--DISCONNECTED SCREEN END-->
+
+            <!--        NO RESULTS SCREEN START -->
+            <include
+                android:id="@+id/noResultsScreen"
+                layout="@layout/fragment_result_no_results_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/heavy_margin"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/secondDivider" />
+            <!--NO RESULTS SCREEN END-->
+
+            <LinearLayout
+                android:id="@+id/secondDivider"
+                style="@style/dividerStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carImageView" />
+
+            <ImageView
+                android:id="@+id/bikeImageView"
+                style="@style/iconImageView"
+                android:layout_marginTop="@dimen/default_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/secondDivider"
+                app:srcCompat="@drawable/icon_traffic_bike" />
+
+            <com.robinhood.ticker.TickerView
+                android:id="@+id/bikeTickerView"
+                style="@style/tickerViewStyle"
+                android:textColor="@color/yellow"
+                app:distance="@{result.cyclingDistance.distance}"
+                app:layout_constraintBottom_toTopOf="@id/bikeTimeTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/bikeImageView"
+                app:layout_constraintTop_toTopOf="@+id/bikeImageView" />
+
+            <TextView
+                android:id="@+id/bikeTimeTextView"
+                style="@style/durationTextView"
+                app:layout_constraintBottom_toBottomOf="@+id/bikeImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/bikeTickerView"
+                app:layout_constraintTop_toBottomOf="@+id/bikeTickerView"
+                app:timeText="@{result.cyclingDistance.duration}" />
+
+            <LinearLayout
+                android:id="@+id/thirdDivider"
+                style="@style/dividerStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bikeImageView" />
+
+            <ImageView
+                android:id="@+id/walkImageView"
+                style="@style/iconImageView"
+                android:layout_marginTop="@dimen/default_margin"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/thirdDivider"
+                app:srcCompat="@drawable/icon_traffic_walk" />
+
+            <com.robinhood.ticker.TickerView
+                android:id="@+id/walkTickerView"
+                style="@style/tickerViewStyle"
+                android:textColor="@color/blue"
+                app:distance="@{result.walkDistance.distance}"
+                app:layout_constraintBottom_toTopOf="@id/walkTimeTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/walkImageView"
+                app:layout_constraintTop_toTopOf="@+id/walkImageView" />
+
+            <TextView
+                android:id="@+id/walkTimeTextView"
+                style="@style/durationTextView"
+                app:layout_constraintBottom_toBottomOf="@+id/walkImageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/walkTickerView"
+                app:layout_constraintTop_toBottomOf="@+id/walkTickerView"
+                app:timeText="@{result.walkDistance.duration}" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/homeButton"
+                style="@style/rightBottomFabStyle"
+                app:backgroundTint="?attr/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:rippleColor="@android:color/white"
+                app:srcCompat="@drawable/ic_home_white"
+                app:tint="@color/white" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".screens.selector.SelectorFragment">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/startLocationLayout"
+            style="@style/autoCompleteLayoutStyle"
+            android:layout_marginTop="@dimen/auto_complete_text_input_top_margin"
+            android:hint="@string/label_selector_starting_location"
+            app:endIconCheckable="true"
+            app:endIconDrawable="@drawable/ic_location_black"
+            app:endIconMode="custom"
+            app:endIconTint="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+            <AutoCompleteTextView
+                android:id="@+id/startLocationTextView"
+                style="@style/autoCompleteTextViewStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/destinationLocationLayout"
+            style="@style/autoCompleteLayoutStyle"
+            android:hint="@string/label_selector_destination"
+            app:layout_constraintEnd_toEndOf="@id/endGuideline"
+            app:layout_constraintStart_toStartOf="@id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/startLocationLayout">
+
+            <AutoCompleteTextView
+                android:id="@+id/destinationLocationTextView"
+                style="@style/autoCompleteTextViewStyle"
+                app:layout_constraintEnd_toEndOf="@id/endGuideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/startLocationLayout" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/listAllCitiesView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin"
+            android:text="@string/label_selector_list_all_cities"
+            android:textColor="@color/purple_700"
+            app:layout_constraintEnd_toEndOf="@+id/destinationLocationLayout"
+            app:layout_constraintStart_toStartOf="@+id/startGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/destinationLocationLayout" />
+
+        <Button
+            android:id="@+id/calculateButton"
+            style="@style/mainPageButtonStyle"
+            android:backgroundTint="@color/blue"
+            android:text="@string/label_button_selector_calculate_distance"
+            app:icon="@drawable/ic_calculate_white"
+            app:layout_constraintBottom_toTopOf="@+id/openMapButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/openMapButton"
+            style="@style/mainPageButtonStyle"
+            android:backgroundTint="@color/green"
+            android:text="@string/label_button_selector_select_from_map"
+            app:icon="@drawable/ic_map_white"
+            app:layout_constraintBottom_toTopOf="@+id/settingsButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <Button
+            android:id="@+id/settingsButton"
+            style="@style/mainPageButtonStyle"
+            android:layout_marginBottom="@dimen/selector_button_bottom_margin"
+            android:backgroundTint="@color/yellow"
+            android:text="@string/label_button_selector_go_to_settings"
+            app:icon="@drawable/ic_settings_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_dodgeInsetEdges="bottom" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/ten_pct" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/endGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="@dimen/ninety_pct" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/app_logo" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

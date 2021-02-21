@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/selectorFragment">
+    <fragment
+        android:id="@+id/selectorFragment"
+        android:name="com.udacity.distancecalculator.screens.selector.SelectorFragment"
+        android:label="@string/label_navigation_selector_screen"
+        app:launchSingleTop="true"
+        app:popUpTo="@+id/nav_graph"
+        app:popUpToInclusive="true">
+        <action
+            android:id="@+id/action_selectorFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <action
+            android:id="@+id/action_selectorFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_selectorFragment_to_mapSelectorFragment"
+            app:destination="@id/mapSelectorFragment" />
+        <action
+            android:id="@+id/action_selectorFragment_to_locationListFragment"
+            app:destination="@id/locationListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.udacity.distancecalculator.screens.result.ResultFragment"
+        android:label="@string/label_navigation_results_screen">
+        <argument
+            android:name="startCity"
+            app:argType="com.udacity.distancecalculator.cities.model.CityModel" />
+        <argument
+            android:name="destinationCity"
+            app:argType="com.udacity.distancecalculator.cities.model.CityModel" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.udacity.distancecalculator.screens.settings.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/mapSelectorFragment"
+        android:name="com.udacity.distancecalculator.screens.mapselector.MapSelectorFragment"
+        android:label="@string/label_navigation_map_selector_screen"
+        tools:layout="@layout/fragment_map_selector">
+        <action
+            android:id="@+id/action_mapSelectorFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/selectorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationListFragment"
+        android:name="com.udacity.distancecalculator.screens.locationlist.LocationListFragment"
+        android:label="@string/label_navigation_location_list" />
+</navigation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:defaultValue="@string/language_english_key"
+        android:entries="@array/languageArray"
+        android:entryValues="@array/languageValues"
+        android:key="@string/language_preference_key"
+        android:title="@string/language_preference_title" />
+
+    <ListPreference
+        android:defaultValue="@string/map_style_default_key"
+        android:entries="@array/mapStyleArray"
+        android:entryValues="@array/mapStyleValues"
+        android:key="@string/map_style_preference_key"
+        android:title="@string/map_style_preference_title" />
+
+    <ListPreference
+        android:defaultValue="@string/distance_unit_km_key"
+        android:entries="@array/distanceUnitArray"
+        android:entryValues="@array/distanceUnitValues"
+        android:key="@string/distance_unit_preference_key"
+        android:title="@string/distance_unit_preference_title" />
+
+</PreferenceScreen>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    GENERAL-->
+    <integer name="cities_list_size">26569</integer>
+    <integer name="double_speed">2</integer>
+    <integer name="progress_bar_max">100</integer>
+    <integer name="single">1</integer>
+
+    <!--    MOTION-->
+    <integer name="motion_loader_duration">2500</integer>
+    <integer name="motion_settings_duration">1500</integer>
+    <integer name="motion_alpha_transparent">0</integer>
+    <integer name="motion_alpha_opaque">1</integer>
+    <integer name="motion_angle_negative_turn">-360</integer>
+    <integer name="motion_angle_negative_straight">-180</integer>
+    <integer name="motion_angle_start">0</integer>
+    <integer name="motion_frame_start">0</integer>
+    <integer name="motion_frame_mid">50</integer>
+    <integer name="motion_frame_end">100</integer>
+</resources>
