@@ -15,6 +15,7 @@ class LoaderActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.setBackgroundDrawable(null)
         setContentView(R.layout.activity_loader)
         updateTitle()
         viewModel.startLoading()

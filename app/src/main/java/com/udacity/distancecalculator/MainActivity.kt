@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.setBackgroundDrawable(null)
         LocaleUtil.updateLanguage(this)
         setContentView(R.layout.activity_main)
         setUpNavHost()
