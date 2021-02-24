@@ -34,7 +34,7 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        freeCompilerArgs = ["$attr_allowResultAsReturnType"]
+        freeCompilerArgs = ["-Xallow-result-return-type"]
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
     buildFeatures {
@@ -42,7 +42,7 @@ android {
     }
     externalNativeBuild {
         cmake {
-            path "$attr_cMakeFile"
+            path "CMakeLists.txt"
         }
     }
     ndkVersion "$version_ndk"
@@ -65,8 +65,6 @@ dependencies {
     implementation retrofitLibs.values()
 
     implementation moshiLibs.values()
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt moshiKapt.values()
 
     implementation hiltLibs.values()
